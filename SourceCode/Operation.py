@@ -1,7 +1,6 @@
 #操作方法をまとめたスクリプト
 import pygame
 import System   
-import sys
 
 #押した瞬間だけ反応するキーの作成---
 keyManager_r = System.keyManager(pygame.K_r)

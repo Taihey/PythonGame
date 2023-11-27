@@ -1,6 +1,5 @@
 import pygame
 import Component 
-import gamefile
 import System
 
 pygame.init()  
@@ -8,8 +7,6 @@ key = pygame.key.get_pressed()
 window_x = System.window_x
 window_y = System.window_y
 g = 10  
-
-portion = pygame.image.load(gamefile.portion)
 
 BLACK  = (  0,   0,   0)
 
@@ -314,14 +311,14 @@ class Player(GameObject):
                     sceneManager.loadNextScene(3)
             
     #UI-------------------------
-    def drawPortion(self, bg):
+    def drawPortion(self, bg, portion):
         #所持している回復薬を表示
         for x in range(self.portion):
             bg.blit(portion, 
                     [250 + (portion.get_width() + 10)*(x % 10),    #1行10個
                      20 + (portion.get_height() + 10)*(int)(x / 10)])
         
-    def drawPortionFlex(self, bg, x, y):
+    def drawPortionFlex(self, bg, portion, x, y):
         bg.blit(portion, [x, y])
     
     def drawLife(self, bg, x, y):             #左上の座標を指定

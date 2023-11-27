@@ -7,7 +7,6 @@ BLACK  = (  0,   0,   0)
 WHITE  = (255, 255, 255)
 RED    = (255,   0,   0) 
 ORANGE = (255, 128,   0)
-GREEN  = (  0, 255,   0)
 BLUE   = (  0,   0, 255)
 YELLOW = (255, 255,   0)
 AQUA   = (  0, 255, 255)
@@ -17,6 +16,7 @@ window_y = System.window_x
 
 #UIとしての画像
 opening = pygame.image.load(gamefile.opening)
+portion = pygame.image.load(gamefile.portion)
 #pause画面用のスクリーン
 pauseScreen = pygame.Surface((window_x, window_y), flags=pygame.SRCALPHA)
 pauseScreen.fill((0, 255, 255, 128))
@@ -52,7 +52,7 @@ def drawUI(bg, plr, timer):
     #タイトル以外    
     if System.index >= 1:
         plr.drawLife(bg, x=20, y=20)      #体力を表示し続ける
-        plr.drawPortion(bg)
+        plr.drawPortion(bg, portion)
         pygame.draw.rect(bg, YELLOW, [15, 185, 105, 30])
         pygame.draw.rect(bg, AQUA, [13, 183, 109, 34], width = 4, border_radius=3)
         System.Text("[P]:pause").putFlex(bg, 30, BLUE, x=20, y=190)
@@ -69,7 +69,7 @@ def drawUI(bg, plr, timer):
         System.Text("[UP]:jump").putFlex(bg, 30, BLUE, x=20, y=100)
         System.Text("[SPACE][J]:big jump").putFlex(bg, 30, BLUE, x=20, y=125)
         System.Text("[R]:").putFlex(bg, 30, BLUE, x=20, y=150)
-        plr.drawPortionFlex(bg, x=55, y=150)
+        plr.drawPortionFlex(bg, portion, x=55, y=150)
         System.Text("recover").putFlex(bg, 30, BLUE, x=80, y=150)
     #バトル突入
     if System.index == 1.5:
@@ -84,7 +84,7 @@ def drawUI(bg, plr, timer):
         pygame.draw.rect(bg, YELLOW, [15, 70, 215, 81])
         pygame.draw.rect(bg, AQUA, [13, 68, 219, 85], width=4, border_radius=3)
         System.Text("[A]:attack").putFlex(bg, 30, BLUE, x=20, y=75)
-        System.Text("[SPACE]:excape").putFlex(bg, 30, BLUE, x=20, y=100)
+        System.Text("[SPACE]:escape").putFlex(bg, 30, BLUE, x=20, y=100)
         System.Text("[DOWN]:push enemy").putFlex(bg, 30, BLUE, x=20, y=125)
     #勝利時    
     if System.index == 2.7:

@@ -87,8 +87,8 @@ def main():
 
                 enemies = Constructor.ConstructEnemies(plr)
                 for enemy in enemies:
-                    sceneManager.addHierarchy("field", enemy)      
-                
+                    sceneManager.addHierarchy("field", enemy)     
+                    
             elif System.tmr == 2:
                 objects = Constructor.ConstructObjects()
                 for obj in objects:
@@ -110,14 +110,14 @@ def main():
                 
                 audioPlayer.__init__()
                 audioPlayer.playMusic("field")
-
+                
             elif System.tmr == 4:
                 timer.initiate()   #タイマーを初期化
                 for i in range(len(enemies)):
                     timer.addLocalTimer(enemies[i])
                 timer.addLocalTimer(plr)
                 sceneManager.moveScene(1)
-                                
+                               
                 continue      
         
         if System.index == 1:                               #フィールド

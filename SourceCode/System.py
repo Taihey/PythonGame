@@ -31,9 +31,7 @@ class Timer:                   #時間を管理するクラス
         self.c = [True, True, True]
         
         global tmr
-        tmr = 0
-        global audiotmr
-        audiotmr = 0
+        tmr = 0                #シーンの切り替えのたびに呼び出す
     
     def initiate(self):       
         self.fr = frameRate    
@@ -46,7 +44,7 @@ class Timer:                   #時間を管理するクラス
         
         global tmr
         tmr = 0
-        global audiotmr
+        global audiotmr        #ロードでだけ初期化する
         audiotmr = 0
     
     def pauseGame(self):
@@ -248,9 +246,10 @@ class Audio:
     
     def setState(self, state):     
         global audiotmr
-        audiotmr = 0               #ボスを倒す度に新しいbgmを最初から流す
+                                  #ボスを倒す度に新しいbgmを最初から流す
         if self.state < state:
             self.state = state
+            audiotmr = 0    
     
     def playSE(self, string):
         if string == "click":
@@ -268,7 +267,7 @@ class Audio:
         time = 0
         if string == "field":     #フィールドのbgmは中断しても途中から流す
             onfield = True
-            if self.state == 0:
+            if self.state == 0: 
                 pygame.mixer.music.load(self.BGMs[6])
                 time = int(audiotmr) % 12
             elif self.state == 1:

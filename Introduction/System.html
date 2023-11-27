@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="jp"> 
+    <head>
+        <meta charset="UTF-8">
+<script src="header.js"></script>  
+        <h2>-ゲームシステム-</h2>
+
+        <div class="flex2"><h3 id="title">タイトル画面</h3></div>
+        <div class="flex">
+            <div id="center"><img id="portrait" src="./Picture/Title2.png"></div>
+            <div id="center" class="text">
+                <p>実行ファイルをクリックしてゲームを開始すると、左のタイトル画面が開きます。</p>
+                <ul class="title">
+                    <li>ベストタイム(画面左上)</li>
+                </ul>
+                <p>これまでクリア中で、一番速いクリアタイムを示します。</p>
+                
+            </div>
+        </div>
+
+        <div class="flex2"><h3 id="title">フィールド</h3></div>
+        <div class="flex">
+            <div id="center" class="text">
+                <ul class="title">
+                    <li>プレイヤーの体力 (画面左上)</li>
+                </ul>
+                <p>プレイヤーの体力の残りを示します。0になるとゲームオーバーです。</p>
+                <ul class="title">
+                    <li>タイム (画面左上)</li>
+                </ul>
+                <p>タイトルからシーンを移動するとカウントを開始します。クリアすると止まります。</p>
+                <ul class="title">
+                    <li>プレイヤーのパラメーター (画面左下)</li>
+                </ul>
+                <p>attack: 高い程敵に与えるダメージが大きくなります。</p>
+                <p>defense: 高いほど敵から受けるダメージが少なくなります。</p>
+            </div>
+            <div id="center"><img id="portrait" src="./Picture/Field2.png"></div>
+        </div>
+
+        <div class="flex2"><h3 id="title">バトルシーン</h3></div>
+        <div class="flex">
+            <div id="center"><img id="portrait" src="./Picture/Battle2.png"></div>
+            <div id="center" class="text">
+                <p>フィールドで敵と当たるとその敵とのバトルが開始します。</p>
+                <p> 敵よりも高い位置で当たると自分のターンから、同じ高さで当たると
+                    敵のターンから始まります。</p>
+                
+                <ul class="title">
+                    <li>敵の体力 (画面右下)</li>
+                </ul>
+                <p>バトル相手の敵の体力です。これが0になると勝利し、
+                    敵の強さに応じてパワーアップします。</p>
+                
+            </div>
+        </div>
+<script src="footer.js"></script>

@@ -1,0 +1,191 @@
+body{
+    background:linear-gradient(90deg, rgba(100, 200, 200, 0.5), rgba(0, 200, 100, 0.5));
+}
+
+h1 {
+    color: white;
+    background: linear-gradient(90deg, rgb(0, 128, 0), rgb(0, 128, 128));
+    border-top: solid 5px black;
+    border-bottom: solid 5px black;
+
+    font-size: 40px; 
+    text-align: center;
+
+    margin: 10px 0px 10px 0px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+
+    margin: 0px 0px 20px 0px;
+}
+
+h3 {
+    font-size: 25px;
+    text-align: center;
+}
+h3#title {
+    border-bottom: solid 3px black;
+    width: 400px;
+}
+
+ul {
+    list-style: none;
+}
+
+.center {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 1.3em;
+}
+a#top {
+    text-decoration: none;
+    color: rgba(0, 100, 0);
+    background: linear-gradient(60deg, white, rgb(0, 255, 100));
+    border-radius: 5px;
+    padding: 0 5px 0 5px;
+}
+div.alert {
+    border: solid 3px black;
+    border-radius: 5px;
+    margin: 0, 10px, 0, 10px;
+}
+div#t {
+    width: 500px;
+    text-align: left;
+}
+.center div.alert {
+    width: 350px;
+}
+.alert p {
+    margin: 10px 0 0 0;
+    padding: 0px;
+    text-decoration-line: underline;
+}
+.alert li {
+    text-align: left;
+    font-size: 0.8em;
+    margin: 10px 0 10px 0;
+}
+.alert ul #left {
+    text-align: center;
+}
+
+img#big {
+    width: 700px;
+}
+#portrait {
+    width: 350px;
+    border: solid 5px white;
+    border-radius: 7px;
+}
+#laying {
+    width: 400px;
+    margin: 20px 0 20px 0;
+
+    border: solid 5px white;
+    border-radius: 7px;
+}
+.mini-lay {
+    height: 150px;
+    border: solid 5px white;
+    border-radius: 7px;
+}
+
+div.flex2 {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+div.flex {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 50px 0;
+}
+div#top {
+    margin: 0px;
+}
+.flex div{
+    padding: 0px 20px 0px 20px; 
+    width: 400px;
+}
+.flex#big div {
+    width: 700px;
+}
+.flex div.top {
+    padding: 0px;
+}
+
+.flex div.text{
+    width: 450px;
+}
+.flex ul {
+    list-style: none;
+    font-size: 1.45em;
+    text-align: left;
+
+    margin: 0px;
+    padding: 0px;
+}
+.flex ul.title {
+    background: linear-gradient(60deg, white, rgb(0, 255, 100));
+    border-radius: 10px;
+    padding: 0 0 0 10px;
+}
+
+.flex p {
+    text-align: left;
+    font-size: 1.3em;
+    padding: 10px 0 10px 0;
+    margin: 0 0 10px 0;
+}
+.flex p#container {
+    margin: 25px 0 25px 0;
+}
+.flex p#alert{
+    font-size: 1em;
+    padding:20px 0px 0px 0px;
+}
+
+.flex .image {
+    padding: 0.5em 0.5em;
+    border: double 5px  blue;
+}
+
+.nav ul {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.nav li {
+    width: 100px;
+    margin: 0px;
+    padding: 20px 10px 20px 10px; 
+    font-weight: bold;
+    font-size: 0.8em;
+    text-align: center;
+
+    background: linear-gradient(150deg, rgb(0, 128, 0), rgb(0, 128, 128));
+    border: solid 3px;
+    border-radius: 5px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer {
+    text-align: center;
+    font-size: 1em;
+    padding: 5px;
+
+    background-color: gray;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}

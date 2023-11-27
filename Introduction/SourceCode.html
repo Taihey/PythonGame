@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="jp"> 
+    <head>
+        <meta charset="UTF-8">
+<script src="header.js"></script>  
+        <h2>-ソースコード紹介-</h2>
+        <div class="flex"><div class="alert" id="t">
+            <p>GitHubのURL:</p>
+            <ul>
+                <li><a id="top" href="https://github.com/Taihey/PythonGame.git">
+                https://github.com/Taihey/PythonGame.git
+                </a></li>
+                <li>
+                    Windows用のexeファイルとpythonのソースコード、このhtmlファイルを置いています。
+                </li>
+            </ul>
+        </div></div>
+        <p>ソースコードの依存関係は以下のようになっています。</p>
+        <div class="center">
+            <img id="big" src="./Picture/codeStructure.png">
+        </div>
+        <div class="text">
+            <p>矢印はそれぞれのスクリプトがどのスクリプト、ライブラリを参照しているかを示します。</p>
+            <p>また、黒い矢印は自作のスクリプト、赤い矢印はpythonの標準ライブラリの参照です。</p>
+            <p>赤い枠は外部ライブラリpygameを参照しているスクリプトです。</p>
+            <p>( )の中にそのスクリプトの行数を示します。</p>
+        </div>
+        <div class="flex">
+            <div id="center">
+                <ul class="title">
+                    <li>gamefile.py (122行)</li>
+                </ul>
+                <p>このゲームで用いた画像、サウンド、セーブファイルのパスを変数に格納しています。</p>
+                <p>ここで宣言した変数を他のスクリプトで、必要に応じて使います。</p>
+            </div>
+            <div id="center" class="text">
+                <ul class="title">
+                    <li>Component.py (122行)</li>
+                </ul>
+                <p>gameclass.pyで宣言しているクラスのメンバ変数の型に用いるクラスを宣言しています。</p>
+                <div class="alert">
+                    <ul id="left">
+                        <li>Animator: 画像の変化を制御します。また、シーンに応じた画像のロードを行います。</li>
+                        <li>Audio: PlayerとEnemyの行動に割り当てる効果音をまとめます。</li>
+                        <li>BoxCollider: 長方形の当たり判定です。</li>
+                    </ul>
+                </div>
+                    
+            </div>
+        </div>
+
+        <div class="flex" id="big">
+            <div id="center" class="text">
+                <ul class="title">
+                    <li>System.py (446行)</li>
+                </ul>
+                <div>
+                    <p>ゲームのシステムにかかわる変数をここで指定しています。</p>
+                    <p>また、それらの変数を制御するクラスの宣言も行っています。</p>
+                </div>
+                <div class="alert">
+                    <ul id="left">
+                        <li>Timer: シーンの移り変わりを制御する時間や、
+                            オブジェクトのアニメーションを制御する時間をコントロールします。</li>
+                        <li>ScoreManager: ゲームのハイスコアの保存、ロードを担当します。</li>
+                        <li>Camera: フィールドを移動するシーンでのオブジェクトの表示を行います。</li>
+                        <li>btlCamera: バトルシーンでのオブジェクトを表示します。</li>
+                        <li>Audio: シーンの状況に合わせたbgmの制御を行います。</li>
+                        <li>SceneManager: シーンを表す変数indexの制御を行います。</li>
+                        <li>keyManager: 押した瞬間だけ反応するキーを作成します。</li>
+                        <li>Text: シーンの合間に表示する移動するUIなどを作成します。</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>また、フィールドを移動するシーンでオブジェクト間の
+                        衝突を判定する関数もここで宣言しています。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex" id="big">
+            <div id="center" class="text">
+                <ul class="title">
+                    <li>gameclass.py (504行)</li>
+                </ul>
+                <div>
+                    <p>ゲームの画面で表示するオブジェクトの型となるクラスを宣言しています。</p>
+                </div>
+                <div class="alert">
+                    <ul id="left">
+                        <li>GameObject: すべての親クラスです。基本となるパラメーター、アニメーション
+                            や位置を動かす関数、衝突を判定した時のそのオブジェクト処理を含みます。床
+                            に衝突したときの処理をここに記述しています。</li>
+                        <li>Player: 操作するプレイヤーのクラスです。フィールドでの移動や
+                            バトルシーンでの動作を指定します。</li>
+                        <li>Enemy: フィールドを移動するシーンでのオブジェクトの表示を行います。</li>
+                        <li>FinalBoss: Enemyにアニメーションを加えたものです。</li>
+                        <li>Object: 背景の静止したオブジェクトを作るクラスです。</li>
+                        <li>Floor: 床となるオブジェクトの型となるクラスです。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="flex">
+            <div id="center">
+                <ul class="title">
+                    <li>Constructor.py (186行)</li>
+                </ul>
+                <p>gameclass.pyで宣言したクラスを用いた、実際にゲームで用いるオブジェクトを作成しています。</p>
+                <p>タイトル画面からプレイシーンへと遷移する間に実行します。</p>
+            </div>
+            <div id="center" class="text">
+                <ul class="title">
+                    <li>UI.py (120行)</li>
+                </ul>
+                <p>タイトル画面や、プレイ中のマニュアルやシーンの移り変わりに表示するテキストを設定します。</p>
+                <p>プレイヤーと敵の体力の表示、ポーズ画面などもここで設定します。</p>
+                <ul class="title">
+                    <li>Operation.py (81行)</li>
+                </ul>
+                <p>実際にゲームをプレイする際のキーの割り当てを設定しています。</p>
+            </div>
+        </div>
+        <div class="flex" id="big">
+            <div id="center" class="text">
+                <ul class="title">
+                    <li>main.py (336行)</li>
+                </ul>
+                <div>
+                    <p>このゲームをプレイするのに直接実行するファイルです。</p>
+                </div>
+                <div class="alert">
+                    <ul id="left">
+                        <li>14~33行目: ゲームを開始したときの処理です。
+                            System.pyで宣言した型のオブジェクトを作成します。</li>
+                        <li>35行目~: マイフレーム実行される処理です。</li>
+                        <li>41~43行目: シーン、プレイヤーと敵のアニメーションを制御し、
+                            クリアタイムを記録するタイマーを動かします。</li>
+                        <li>47~54行目: Pauseに関する操作です。</li>
+                        <li>56~68行目: フィールドとバトルシーンでのキャラクターを動かします。
+                            Pause中はここと上で動かしたタイマーを止めます。</li>
+                        <li>70~328行目: シーン間の関係を記しています。</li>
+                        <li>330行目: UIを描きます。最後に書くことで隠れずに表示されます。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<script src="footer.js"></script>

@@ -1,5 +1,5 @@
 
-document.write('        <title>Rowing Game</title> ')
+document.write('        <title>Punch Man</title> ')
 document.write('        <link rel="stylesheet" ')
 document.write('        href="Style.css"> ')
 document.write('    </head> ')
